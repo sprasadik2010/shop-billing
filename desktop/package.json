@@ -1,0 +1,40 @@
+{
+  "name": "shop-billing-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "dependencies": {},
+  "build": {
+  "appId": "com.shop.billing",
+  "productName": "Shop Billing",
+  "directories": {
+    "output": "dist"
+  },
+
+  "files": [
+    "**/*",
+    {
+      "from": "../frontend-ts/dist",
+      "to": "frontend-ts/dist"
+    }
+  ],
+
+  "extraResources": [
+    {
+      "from": "../backend/dist/main.exe",
+      "to": "backend/main.exe"
+    }
+  ],
+
+  "win": {
+    "target": "nsis"
+  }
+}
+}
