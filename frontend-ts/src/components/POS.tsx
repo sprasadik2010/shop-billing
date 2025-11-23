@@ -3,7 +3,7 @@ import { Search, Plus, Minus, X, ShoppingCart, Receipt } from 'lucide-react';
 import axios from 'axios';
 import { Product, Invoice, CartItem } from '../types';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://shop-billing-backend-n3ro.onrender.com';
 
 const POS: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);

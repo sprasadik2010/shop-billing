@@ -14,7 +14,7 @@ import {
 import axios from 'axios';
 import { Product, Invoice, DashboardStats, ProductFormData } from '../types';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://shop-billing-backend-n3ro.onrender.com';
 
 type ActiveTab = 'dashboard' | 'products' | 'invoices';
 
