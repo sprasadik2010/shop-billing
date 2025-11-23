@@ -14,7 +14,12 @@ app = FastAPI(title="Shop Billing System", version="1.0.0")
 # CORS middleware - allow your frontend dev server and local
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://shop-billing.onrender.com",  # your frontend
+        "https://shop-billing-backend-n3ro.onrender.com"  # optional
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
